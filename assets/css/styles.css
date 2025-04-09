@@ -1,0 +1,786 @@
+/* Reset y configuración básica */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Enlace de salto para accesibilidad */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #1d6379;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Estilos generales del cuerpo */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Contenedor principal para centrar el contenido */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #1d6379;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Título principal */
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    padding-left: 1rem;
+}
+
+/* Navegación */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Enlaces de navegación */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 0.5rem;
+}
+
+nav a:hover {
+    color: #3498db;
+}
+
+/* Layout de dos columnas */
+.columnas {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+/* Estilos de la columna izquierda */
+.columna-izquierda {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Estilos de la columna derecha */
+.columna-derecha {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Estilos generales de las secciones */
+.seccion {
+    margin-bottom: 2rem;
+}
+
+/* Títulos de sección */
+.seccion h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #3498db;
+}
+
+/* Estilos del perfil */
+.perfil {
+    text-align: center;
+    padding: 1rem;
+}
+
+.foto-perfil {
+    width: 250px;
+    height: 250px;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    filter: brightness(1.02) contrast(1.05);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.foto-perfil:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Grid de habilidades */
+.habilidades-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+/* Estilos de los enlaces de redes sociales */
+.red-social {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.red-social i {
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.red-social span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.red-social:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.red-social:hover span {
+    color: #3498db;
+}
+
+/* Colores específicos para cada red social */
+.instagram i {
+    color: #E1306C;
+}
+
+.whatsapp i {
+    color: #25D366;
+}
+
+.telegram i {
+    color: #0088cc;
+}
+
+.red-social:hover i {
+    transform: scale(1.1);
+}
+
+.red-social:hover span {
+    color: #3498db;
+}
+
+/* Estilos de contacto */
+.contacto-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contacto-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.8rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.contacto-item i {
+    font-size: 1.2rem;
+    color: #3498db;
+    margin-bottom: 0.5rem;
+}
+
+.contacto-item p {
+    color: #444;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.btn-contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: 70%;
+    max-width: 180px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 0.5rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    position: relative;
+    overflow: hidden;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.btn-contacto:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, #2980b9, #3498db);
+}
+
+.btn-contacto:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-contacto i {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-contacto:hover i {
+    transform: scale(1.1) rotate(5deg);
+}
+
+@media screen and (max-width: 768px) {
+    .contacto-item {
+        padding: 0.7rem;
+    }
+    
+    .contacto-item p {
+        font-size: 0.85rem;
+    }
+    
+    .btn-contacto {
+        width: 75%;
+        max-width: 160px;
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .red-social {
+        padding: 0.7rem;
+        max-width: 180px;
+    }
+    
+    .red-social i {
+        font-size: 1.3rem;
+    }
+    
+    .red-social span {
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .contacto-item {
+        padding: 0.6rem;
+    }
+    
+    .contacto-item p {
+        font-size: 0.8rem;
+    }
+    
+    .btn-contacto {
+        width: 80%;
+        max-width: 150px;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .red-social {
+        padding: 0.6rem;
+        max-width: 160px;
+    }
+    
+    .red-social i {
+        font-size: 1.2rem;
+    }
+    
+    .red-social span {
+        font-size: 0.8rem;
+    }
+}
+
+/* Estilos de habilidades técnicas */
+.habilidades-tecnicas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.habilidad-tecnica {
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.habilidad-tecnica:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.habilidad-tecnica i {
+    font-size: 2rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.habilidad-tecnica h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.habilidad-tecnica p {
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Media Queries para diferentes tamaños de pantalla */
+
+/* Tablets y pantallas medianas */
+@media screen and (max-width: 992px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .columnas {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .columna-izquierda,
+    .columna-derecha {
+        padding: 1.5rem;
+    }
+
+    .foto-perfil {
+        width: 200px;
+        height: 200px;
+    }
+
+    .habilidades-tecnicas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Dispositivos móviles */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 0.8rem 0;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.8rem;
+        padding-left: 0.8rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        padding: 0.3rem;
+    }
+
+    .habilidades-tecnicas {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto-info {
+        gap: 1rem;
+    }
+
+    .contacto-item {
+        padding: 0.7rem;
+    }
+
+    .contacto-item p {
+        font-size: 0.85rem;
+    }
+
+    .btn-contacto {
+        width: 75%;
+        max-width: 160px;
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .contenido-biografia {
+        padding: 1.5rem;
+    }
+    
+    .contenido-biografia p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Dispositivos móviles pequeños */
+@media screen and (max-width: 576px) {
+    .foto-perfil {
+        width: 150px;
+        height: 150px;
+    }
+
+    .seccion h2 {
+        font-size: 1.3rem;
+    }
+
+    .contacto-item i {
+        font-size: 1.2rem;
+    }
+
+    .contacto-item p {
+        font-size: 0.9rem;
+    }
+
+    .btn-contacto {
+        width: 80%;
+        max-width: 150px;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .red-social {
+        padding: 0.8rem;
+    }
+
+    .red-social i {
+        font-size: 1.5rem;
+    }
+
+    .red-social span {
+        font-size: 0.9rem;
+    }
+
+    .habilidades-tecnicas {
+        margin-top: 1rem;
+    }
+
+    .habilidad-tecnica {
+        padding: 1rem;
+    }
+
+    .habilidad-tecnica i {
+        font-size: 1.5rem;
+    }
+
+    .habilidad-tecnica h3 {
+        font-size: 1.1rem;
+    }
+
+    .habilidad-tecnica p {
+        font-size: 0.9rem;
+    }
+
+    .contenido-biografia {
+        padding: 1.2rem;
+    }
+    
+    .contenido-biografia p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Dispositivos muy pequeños */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    header h1 {
+        font-size: 1.3rem;
+        padding-left: 0.6rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .foto-perfil {
+        width: 120px;
+        height: 120px;
+    }
+
+    .seccion {
+        margin-bottom: 1.5rem;
+    }
+
+    .contacto-item {
+        padding: 0.6rem;
+    }
+
+    .btn-contacto {
+        padding: 0.3rem 0.6rem;
+    }
+}
+
+/* Optimización para dispositivos sin hover */
+@media (hover: none) {
+    .foto-perfil:hover,
+    .red-social:hover,
+    .contacto-item:hover,
+    .habilidad-tecnica:hover,
+    .btn-contacto:hover {
+        transform: none;
+    }
+
+    .red-social:active,
+    .contacto-item:active,
+    .habilidad-tecnica:active,
+    .btn-contacto:active {
+        transform: scale(0.98);
+    }
+}
+
+/* Estilos para la biografía */
+.contenido-biografia {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.contenido-biografia p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    color: #444;
+    text-align: justify;
+    font-size: 1rem;
+}
+
+.contenido-biografia p:last-child {
+    margin-bottom: 0;
+}
+
+/* Media queries para habilidades técnicas */
+@media (max-width: 768px) {
+    .habilidades-tecnicas {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .habilidad-tecnica {
+        padding: 1.2rem;
+    }
+
+    .habilidad-tecnica i {
+        font-size: 2rem;
+    }
+
+    .habilidad-tecnica h3 {
+        font-size: 1.1rem;
+    }
+
+    .habilidad-tecnica p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .habilidad-tecnica {
+        padding: 1rem;
+    }
+
+    .habilidad-tecnica i {
+        font-size: 1.8rem;
+    }
+}
+
+.sobre-mi {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+}
+
+.sobre-mi h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #3498db;
+    font-size: 1.8rem;
+}
+
+.sobre-mi p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    color: #444;
+    text-align: justify;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.sobre-mi p:last-child {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .sobre-mi {
+        padding: 1.5rem;
+    }
+    
+    .sobre-mi h2 {
+        font-size: 1.6rem;
+    }
+    
+    .sobre-mi p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .sobre-mi {
+        padding: 1.2rem;
+    }
+    
+    .sobre-mi h2 {
+        font-size: 1.4rem;
+    }
+    
+    .sobre-mi p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Estilos para la sección de educación */
+.educacion-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.educacion-item {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.educacion-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.educacion-item i {
+    font-size: 2rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.educacion-item h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.educacion-item p {
+    color: #666;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.educacion-item .fecha {
+    color: #3498db;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+    .educacion-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .educacion-item {
+        padding: 1.2rem;
+    }
+    
+    .educacion-item h3 {
+        font-size: 1.1rem;
+    }
+    
+    .educacion-item p {
+        font-size: 0.95rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .educacion-item {
+        padding: 1rem;
+    }
+    
+    .educacion-item h3 {
+        font-size: 1rem;
+    }
+    
+    .educacion-item p {
+        font-size: 0.9rem;
+    }
+    
+    .educacion-item .fecha {
+        font-size: 0.85rem;
+    }
+}
+
+/* Estilos para los anclajes */
+[id^="ancla-"] {
+    position: relative;
+    top: -100px;
+    margin-bottom: -100px;
+    display: block;
+}
+
+/* Ajustes para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    [id^="ancla-"] {
+        top: -80px;
+        margin-bottom: -80px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    [id^="ancla-"] {
+        top: -60px;
+        margin-bottom: -60px;
+    }
+} 

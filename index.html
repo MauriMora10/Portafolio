@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración básica del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    
+    <!-- Enlaces a hojas de estilo y fuentes -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Encabezado de la página -->
+    <header>
+        <div class="container">
+            <!-- Título -->
+            <h1>Mauricio Andrés Mora García</h1>
+        </div>
+            <!-- Menú de navegación principal -->
+        <div class="container" id="menu">
+            <nav>
+                <ul>
+                    <li><a href="#titulo-sobre-mi">Sobre Mí</a></li>
+                    <li><a href="#titulo-biografia">Biografía</a></li>
+                    <li><a href="#titulo-educacion">Educación</a></li>
+                    <li><a href="#titulo-habilidades">Habilidades</a></li>
+                    <li><a href="#titulo-contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="container">
+        <!-- Contenedor de dos columnas -->
+        <div class="columnas">
+            <!-- Columna izquierda: Información personal -->
+            <div class="columna-izquierda">
+                <!-- Sección Sobre Mí -->
+                <section id="sobre-mi" class="seccion">
+                    <h2 id="titulo-sobre-mi">Sobre Mí</h2>
+                    <div class="perfil">
+                        <img src="assets/images/Imagen de WhatsApp 2025-04-09 a las 10.02.19_603c2027.jpg" alt="Foto de perfil de Mauricio Mora" class="foto-perfil">
+                        <p>Mauricio Mora García, 35 años, chileno, estudiante de técnico en informática de la Universidad Católica de Temuco.</p>
+                    </div>
+                </section>
+
+                <!-- Sección Habilidades -->
+                <section id="redes-sociales" class="seccion">
+                    <h2>Redes Sociales</h2>
+                    <div class="habilidades-grid">
+                        <!-- Cada habilidad con su icono -->
+                        <a href="https://www.instagram.com/mauroandres.mg/" target="_blank" rel="noopener noreferrer" class="red-social instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=56962730137" target="_blank" rel="noopener noreferrer" class="red-social whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Whatsapp</span>
+                        </a>
+                        <a href="https://t.me/mauroandres.mg" target="_blank" rel="noopener noreferrer" class="red-social telegram">
+                            <i class="fab fa-telegram"></i>
+                            <span>Telegram</span>
+                        </a>
+                        <a href="https://github.com/MauriMora10" target="_blank" rel="noopener noreferrer" class="red-social github">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Sección Contacto -->
+                <section id="contacto" class="seccion">
+                    <h2 id="titulo-contacto">Contacto</h2>
+                    <div class="contacto-info">
+                        <div class="contacto-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>mmora2024@alu.uct.cl</p>
+                            <a href="mailto:mmora2024@alu.uct.cl" class="btn-contacto">
+                                <i class="fas fa-paper-plane"></i>
+                                Enviar correo
+                            </a>
+                        </div>
+                        <div class="contacto-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+56962730137" class="btn-contacto">
+                                <i class="fas fa-phone-alt"></i>
+                                Llamar
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Columna derecha: Proyectos -->
+            <div class="columna-derecha">
+                <!-- Sección Proyectos -->
+                <section id="biografia" class="seccion">
+                    <h2 id="titulo-biografia">Biografía</h2>
+                    <div class="contenido-biografia">
+                        <p>Soy Mauricio Mora, estudiante de Técnico en Informática en la Universidad Católica de Temuco. Nacido y criado en Temuco, ultimamente he desarrollado un profundo interés por la tecnología y su impacto en la sociedad.</p>
+
+                        <p>Mi trayectoria académica me ha permitido adquirir conocimientos sólidos en desarrollo web, programación y sistemas informáticos. Me destaco por mi capacidad de adaptación y mi constante deseo de aprender nuevas tecnologías.</p>
+                        
+                        <p>Fuera del ámbito académico, disfruto mis tiempos libres practicando ciclismo y tambien dedico tiempo para trabajar y estar con mi familia.</p>
+                    </div>
+                </section>
+
+                <!-- Sección de Educación -->
+                <section id="educacion" class="seccion">
+                    <h2 id="titulo-educacion">Educación</h2>
+                    <div class="educacion-grid">
+                        <div class="educacion-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>Universidad Católica de Temuco</h3>
+                            <p>Técnico en Informática</p>
+                            <span class="fecha">2023 - Presente</span>
+                        </div>
+                        <div class="educacion-item">
+                            <i class="fas fa-certificate"></i>
+                            <h3>Desarrollo Web</h3>
+                            <p>Curso de Desarrollo Web Frontend</p>
+                            <span class="fecha">2023</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="habilidades" class="seccion">
+                    <h2 id="titulo-habilidades">Habilidades Técnicas</h2>
+                    <div class="habilidades-tecnicas">
+                        <div class="habilidad-tecnica">
+                            <i class="fas fa-code"></i>
+                            <h3>Desarrollo Web</h3>
+                            <p>Conocimientos en HTML, CSS y JavaScript para crear sitios web responsivos y modernos.</p>
+                        </div>
+                        <div class="habilidad-tecnica">
+                            <i class="fas fa-database"></i>
+                            <h3>Bases de Datos</h3>
+                            <p>Experiencia en diseño y gestión de bases de datos relacionales.</p>
+                        </div>
+                        <div class="habilidad-tecnica">
+                            <i class="fas fa-network-wired"></i>
+                            <h3>Redes</h3>
+                            <p>Comprensión de protocolos de red y configuración de sistemas informáticos.</p>
+                        </div>
+                        <div class="habilidad-tecnica">
+                            <i class="fas fa-tools"></i>
+                            <h3>Soporte Técnico</h3>
+                            <p>Capacidad para resolver problemas técnicos y brindar soporte a usuarios.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mi Portafolio. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts de JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html> 

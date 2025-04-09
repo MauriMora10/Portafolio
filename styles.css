@@ -1,0 +1,373 @@
+/* Reset y configuración básica */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Importación de fuentes de Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap');
+
+/* Estilos generales del cuerpo */
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Títulos principales */
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+}
+
+/* Subtítulos y encabezados de sección */
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #3498db;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 0.8rem;
+}
+
+/* Párrafos y texto general */
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* Enlaces y navegación */
+nav a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    letter-spacing: 0.5px;
+}
+
+/* Botones y elementos interactivos */
+.btn-contacto {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+/* Redes sociales */
+.red-social span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+}
+
+/* Habilidades técnicas */
+.habilidad-tecnica h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: 0.3px;
+}
+
+.habilidad-tecnica p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Pie de página */
+footer p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Media queries para tipografía responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    .btn-contacto {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+}
+
+/* Layout de dos columnas */
+.columnas {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+/* Estilos de la columna izquierda */
+.columna-izquierda {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Estilos de la columna derecha */
+.columna-derecha {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Media queries para diseño responsive */
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 95%;
+        padding: 0 15px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .columnas {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .columna-izquierda,
+    .columna-derecha {
+        padding: 1.5rem;
+    }
+
+    .foto-perfil {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Ajustes generales */
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    /* Header y navegación */
+    header {
+        padding: 0.8rem 0;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    nav a {
+        padding: 0.5rem;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Layout principal */
+    .columnas {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+        margin: 1.2rem 0;
+    }
+
+    .columna-izquierda {
+        order: 1;
+    }
+
+    .columna-derecha {
+        order: 2;
+    }
+
+    /* Foto de perfil */
+    .foto-perfil {
+        width: 180px;
+        height: 180px;
+        margin: 0 auto 1.2rem;
+    }
+
+    /* Secciones */
+    .seccion {
+        margin-bottom: 1.2rem;
+    }
+
+    .seccion h2 {
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+    }
+
+    /* Habilidades */
+    .habilidades-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .habilidades-tecnicas {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .habilidad-tecnica {
+        padding: 1rem;
+    }
+
+    /* Contacto */
+    .contacto-info {
+        gap: 0.8rem;
+    }
+
+    .contacto-item {
+        padding: 0.8rem;
+    }
+
+    .btn-contacto {
+        width: 100%;
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    /* Redes sociales */
+    .red-social {
+        padding: 0.8rem;
+        min-height: 44px;
+    }
+
+    .red-social i {
+        font-size: 1.5rem;
+    }
+
+    .red-social span {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    /* Ajustes para pantallas muy pequeñas */
+    body {
+        font-size: 15px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .columnas {
+        gap: 1rem;
+    }
+
+    .columna-izquierda,
+    .columna-derecha {
+        padding: 1rem;
+    }
+
+    .foto-perfil {
+        width: 150px;
+        height: 150px;
+    }
+
+    .seccion h2 {
+        font-size: 1.3rem;
+    }
+
+    .habilidad-tecnica {
+        padding: 0.8rem;
+    }
+
+    .btn-contacto {
+        padding: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Ajustes para dispositivos móviles pequeños */
+    .container {
+        padding: 0 8px;
+    }
+
+    .foto-perfil {
+        width: 130px;
+        height: 130px;
+    }
+
+    .seccion h2 {
+        font-size: 1.2rem;
+    }
+
+    .btn-contacto,
+    .red-social {
+        min-height: 40px;
+    }
+}
+
+/* Ajustes para orientación horizontal en móviles */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .columnas {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .foto-perfil {
+        width: 150px;
+        height: 150px;
+    }
+} 
