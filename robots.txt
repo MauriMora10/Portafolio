@@ -1,0 +1,25 @@
+# robots.txt para Portafolio Personal
+# Última actualización: 2024
+
+# Reglas para todos los motores de búsqueda
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /assets/css/
+Allow: /assets/images/
+
+# Deshabilitar la indexación de archivos específicos
+Disallow: /assets/css/*.map
+Disallow: /assets/css/*.min.css
+Disallow: /script.js
+
+# Deshabilitar la indexación de directorios específicos
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.vscode/
+
+# Sitemap (ajustado para GitHub Pages)
+Sitemap: https://maurimora10.github.io/sitemap.xml
+
+# Configuración adicional
+Crawl-delay: 10 

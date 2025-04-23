@@ -1,8 +1,32 @@
+/* Variables CSS */
+:root {
+    --color-primario: #3b82f6;
+    --color-primario-hover: #2563eb;
+    --color-fondo: #ffffff;
+    --color-fondo-secundario: #f8fafc;
+    --color-texto: #1e293b;
+    --color-texto-secundario: #64748b;
+    --color-borde: #e2e8f0;
+    --color-exito: #10b981;
+    --color-error: #ef4444;
+    --color-advertencia: #f59e0b;
+    --color-info: #3b82f6;
+    --sombra-suave: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --sombra-media: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transicion-rapida: 0.3s ease;
+    --radio-borde: 8px;
+}
+
 /* Reset y configuración básica */
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 /* Enlace de salto para accesibilidad */
@@ -10,7 +34,7 @@
     position: absolute;
     top: -40px;
     left: 0;
-    background: #1d6379;
+    background: var(--color-primario);
     color: white;
     padding: 8px;
     z-index: 100;
@@ -25,55 +49,63 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f5f5f5;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
 }
 
 /* Contenedor principal para centrar el contenido */
 .container {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 1rem;
 }
 
 /* Estilos del encabezado */
 header {
-    background-color: #1d6379;
-    color: white;
-    padding: 1rem 0;
+    background-color: #0284c7; /* Azul oscuro */
+    box-shadow: var(--sombra-suave);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
 }
 
 /* Título principal */
 header h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    text-align: left;
-    padding-left: 1rem;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 2.5rem;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
 }
 
 /* Navegación */
-nav ul {
+#menu ul {
     display: flex;
-    list-style: none;
-    gap: 2rem;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    padding: 1rem 0;
+    background-color: #0284c7; /* Mismo azul oscuro que el header */
 }
 
 /* Enlaces de navegación */
-nav a {
-    color: white;
+#menu a {
+    color: white; /* Enlaces en blanco para mejor contraste */
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radio-borde);
+    transition: var(--transicion-rapida);
 }
 
-nav a:hover {
-    color: #3498db;
+#menu a:hover,
+#menu a:focus {
+    color: #bae6fd; /* Azul claro al hacer hover */
+    background-color: rgba(186, 230, 253, 0.1);
+    outline: 2px solid #bae6fd;
 }
 
 /* Layout de dos columnas */
@@ -81,7 +113,7 @@ nav a:hover {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 2rem;
-    margin: 2rem 0;
+    padding: 2rem 0;
 }
 
 /* Estilos de la columna izquierda */
@@ -103,14 +135,18 @@ nav a:hover {
 /* Estilos generales de las secciones */
 .seccion {
     margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: var(--color-fondo);
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-suave);
 }
 
 /* Títulos de sección */
 .seccion h2 {
-    color: #2c3e50;
+    color: var(--color-texto);
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid #3498db;
+    border-bottom: 2px solid var(--color-primario);
 }
 
 /* Estilos del perfil */
@@ -213,125 +249,46 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0.8rem;
-    background-color: #f8f9fa;
+    gap: 0.5rem;
+    padding: 1rem;
+    background-color: var(--color-fondo-secundario);
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-bottom: 1rem;
 }
 
 .contacto-item i {
-    font-size: 1.2rem;
-    color: #3498db;
-    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    color: var(--color-primario);
 }
 
 .contacto-item p {
-    color: #444;
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
+    margin: 0;
+    color: var(--color-texto);
 }
 
-.btn-contacto {
-    display: flex;
+.contacto-item .btn-contacto {
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
     gap: 0.5rem;
     padding: 0.6rem 1.2rem;
-    background: linear-gradient(135deg, #3498db, #2980b9);
+    background: linear-gradient(135deg, #1d4ed8, #2563eb);
     color: white;
-    border-radius: 6px;
     text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
     transition: all 0.3s ease;
-    width: 70%;
-    max-width: 180px;
-    font-weight: 600;
-    text-align: center;
     margin-top: 0.5rem;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
-    position: relative;
-    overflow: hidden;
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
 }
 
-.btn-contacto:hover {
+.contacto-item .btn-contacto:hover {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
     transform: translateY(-2px);
-    box-shadow: 0 5px 12px rgba(0,0,0,0.2);
-    background: linear-gradient(135deg, #2980b9, #3498db);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.btn-contacto:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.btn-contacto i {
+.contacto-item .btn-contacto i {
+    color: white;
     font-size: 1rem;
-    transition: transform 0.3s ease;
-}
-
-.btn-contacto:hover i {
-    transform: scale(1.1) rotate(5deg);
-}
-
-@media screen and (max-width: 768px) {
-    .contacto-item {
-        padding: 0.7rem;
-    }
-    
-    .contacto-item p {
-        font-size: 0.85rem;
-    }
-    
-    .btn-contacto {
-        width: 75%;
-        max-width: 160px;
-        padding: 0.5rem 1rem;
-        font-size: 0.85rem;
-    }
-
-    .red-social {
-        padding: 0.7rem;
-        max-width: 180px;
-    }
-    
-    .red-social i {
-        font-size: 1.3rem;
-    }
-    
-    .red-social span {
-        font-size: 0.85rem;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .contacto-item {
-        padding: 0.6rem;
-    }
-    
-    .contacto-item p {
-        font-size: 0.8rem;
-    }
-    
-    .btn-contacto {
-        width: 80%;
-        max-width: 150px;
-        padding: 0.4rem 0.8rem;
-        font-size: 0.8rem;
-    }
-
-    .red-social {
-        padding: 0.6rem;
-        max-width: 160px;
-    }
-    
-    .red-social i {
-        font-size: 1.2rem;
-    }
-    
-    .red-social span {
-        font-size: 0.8rem;
-    }
 }
 
 /* Estilos de habilidades técnicas */
@@ -374,7 +331,7 @@ nav a:hover {
 /* Tablets y pantallas medianas */
 @media screen and (max-width: 992px) {
     .container {
-        padding: 0 15px;
+        max-width: 720px;
     }
 
     .columnas {
@@ -399,19 +356,27 @@ nav a:hover {
 
 /* Dispositivos móviles */
 @media screen and (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+    
+    .container {
+        max-width: 540px;
+    }
+    
     header {
         padding: 0.8rem 0;
     }
     
     header h1 {
-        font-size: 1.5rem;
+        font-size: 2rem;
         margin-bottom: 0.8rem;
         padding-left: 0.8rem;
     }
 
     nav ul {
-        gap: 1rem;
-        padding: 0 1rem;
+        flex-direction: column;
+        align-items: center;
     }
 
     nav a {
@@ -453,6 +418,10 @@ nav a:hover {
 
 /* Dispositivos móviles pequeños */
 @media screen and (max-width: 576px) {
+    .container {
+        padding: 0 0.5rem;
+    }
+
     .foto-perfil {
         width: 150px;
         height: 150px;
@@ -521,11 +490,11 @@ nav a:hover {
 /* Dispositivos muy pequeños */
 @media screen and (max-width: 480px) {
     .container {
-        padding: 0 10px;
+        padding: 0 0.5rem;
     }
 
     header h1 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         padding-left: 0.6rem;
     }
 
@@ -782,5 +751,456 @@ nav a:hover {
     [id^="ancla-"] {
         top: -60px;
         margin-bottom: -60px;
+    }
+}
+
+/* Estilos para la sección de Proyectos */
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.proyecto-item {
+    background: var(--color-fondo-secundario);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.proyecto-item:hover {
+    transform: translateY(-5px);
+}
+
+.proyecto-item i {
+    font-size: 2rem;
+    color: var(--color-primario);
+    margin-bottom: 1rem;
+}
+
+.proyecto-item h3 {
+    color: var(--color-texto);
+    margin-bottom: 0.5rem;
+}
+
+.proyecto-item p {
+    color: var(--color-texto-secundario);
+    margin-bottom: 1rem;
+}
+
+.btn-proyecto {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--color-primario);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-proyecto:hover {
+    background: var(--color-primario-hover);
+}
+
+/* Estilos para el botón CTA */
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(135deg, #3b82f6, #60a5fa);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+    border: 2px solid #3b82f6;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+    background: linear-gradient(135deg, #60a5fa, #93c5fd);
+    border-color: #60a5fa;
+}
+
+.cta-button i {
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover i {
+    transform: translateY(2px);
+}
+
+/* Estilos para navegación */
+.nav-seccion {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.redes-nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.contacto-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Estilos para el menú principal */
+#menu ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+#menu a {
+    color: var(--color-texto);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+#menu a:hover {
+    color: var(--color-primario);
+    background-color: rgba(59, 130, 246, 0.1);
+}
+
+/* Mejoras de accesibilidad */
+:focus {
+    outline: 2px solid var(--color-primario);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Contraste mejorado */
+@media (prefers-contrast: more) {
+    :root {
+        --color-primario: #1d4ed8;
+        --color-texto: #000000;
+        --color-texto-secundario: #333333;
+    }
+}
+
+/* Estilos del formulario de contacto */
+.formulario-contacto {
+    max-width: 400px;
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+    background-color: var(--color-fondo-secundario);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--color-texto);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    background-color: white;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Estilos del botón del formulario */
+.formulario-contacto .btn-contacto {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.8rem;
+    background: linear-gradient(135deg, #1d4ed8, #2563eb);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.formulario-contacto .btn-contacto:hover {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el botón de contacto en la sección de información */
+.contacto-item .btn-contacto {
+    background: linear-gradient(135deg, #1d4ed8, #2563eb);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contacto-item .btn-contacto:hover {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Media queries para el formulario */
+@media screen and (max-width: 768px) {
+    .formulario-contacto {
+        max-width: 100%;
+        padding: 1rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 0.4rem;
+    }
+    
+    .formulario-contacto .btn-contacto {
+        padding: 0.7rem;
+    }
+}
+
+/* Estilos para mensajes de error del formulario */
+.error-message {
+    color: var(--color-error);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: none;
+}
+
+.form-group input.error,
+.form-group textarea.error {
+    border-color: var(--color-error);
+    background-color: #fef2f2;
+}
+
+.form-group input.error:focus,
+.form-group textarea.error:focus {
+    box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.1);
+}
+
+/* Animación para los mensajes de error */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.form-group input.error,
+.form-group textarea.error {
+    animation: shake 0.3s ease-in-out;
+}
+
+/* Estilos para el sistema de notificaciones toast */
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.toast {
+    background: white;
+    color: var(--color-texto);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-width: 300px;
+    max-width: 400px;
+    animation: slideIn 0.3s ease-out;
+    border-left: 4px solid;
+}
+
+.toast.success {
+    border-left-color: #10b981;
+}
+
+.toast.error {
+    border-left-color: #ef4444;
+}
+
+.toast.warning {
+    border-left-color: #f59e0b;
+}
+
+.toast.info {
+    border-left-color: #3b82f6;
+}
+
+.toast i {
+    font-size: 1.25rem;
+}
+
+.toast.success i {
+    color: #10b981;
+}
+
+.toast.error i {
+    color: #ef4444;
+}
+
+.toast.warning i {
+    color: #f59e0b;
+}
+
+.toast.info i {
+    color: #3b82f6;
+}
+
+.toast .toast-content {
+    flex: 1;
+}
+
+.toast .toast-title {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.toast .toast-message {
+    font-size: 0.875rem;
+    color: var(--color-texto-secundario);
+}
+
+.toast .toast-close {
+    background: none;
+    border: none;
+    color: var(--color-texto-secundario);
+    cursor: pointer;
+    padding: 0.25rem;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.toast .toast-close:hover {
+    color: var(--color-texto);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+.toast.hide {
+    animation: slideOut 0.3s ease-in forwards;
+}
+
+/* Estilos del footer */
+footer {
+    background-color: var(--color-fondo-secundario);
+    padding: 2rem 0;
+    margin-top: 3rem;
+    border-top: 1px solid var(--color-borde);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-content p {
+    color: var(--color-texto-secundario);
+    margin: 0;
+}
+
+.logos-container {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.tec-logo {
+    opacity: 0.8;
+    transition: opacity var(--transicion-rapida);
+}
+
+.tec-logo:hover {
+    opacity: 1;
+}
+
+.tec-logo img {
+    display: block;
+    height: auto;
+}
+
+/* Media queries para el footer */
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .logos-container {
+        margin-top: 1rem;
+        justify-content: center;
     }
 } 

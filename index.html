@@ -4,7 +4,23 @@
     <!-- Configuración básica del documento -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio</title>
+    <meta name="theme-color" content="#3b82f6">
+    <title>Portafolio • Mauricio Mora García</title>
+    <meta name="description" content="Portafolio web Mauricio Mora García, desarrollador front‑end especialista en HTML5, CSS3 y JavaScript.">
+    <meta name="keywords" content="desarrollador frontend, HTML5, CSS3, JavaScript, portfolio, Mauricio Mora, desarrollador web">
+    <meta name="author" content="Mauricio Mora García">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://maurimora10.github.io/">
+    <meta property="og:title" content="Portafolio • Mauricio Mora García">
+    <meta property="og:description" content="Portafolio web Mauricio Mora García, desarrollador front‑end especialista en HTML5, CSS3 y JavaScript.">
+    <meta property="og:image" content="https://maurimora10.github.io/assets/images/Imagen de WhatsApp 2025-04-09 a las 10.02.19_603c2027.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="assets/images/favicon.png">
     
     <!-- Enlaces a hojas de estilo y fuentes -->
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -12,106 +28,143 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Encabezado de la página -->
-    <header>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
+    <header role="banner">
         <div class="container">
-            <!-- Título -->
             <h1>Mauricio Andrés Mora García</h1>
         </div>
-            <!-- Menú de navegación principal -->
-        <div class="container" id="menu">
-            <nav>
-                <ul>
-                    <li><a href="#titulo-sobre-mi">Sobre Mí</a></li>
-                    <li><a href="#titulo-biografia">Biografía</a></li>
-                    <li><a href="#titulo-educacion">Educación</a></li>
-                    <li><a href="#titulo-habilidades">Habilidades</a></li>
-                    <li><a href="#titulo-contacto">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav class="container" id="menu" role="navigation" aria-label="Menú principal">
+            <ul role="list">
+                <li><a href="#sobre-mi" role="menuitem">Sobre Mí</a></li>
+                <li><a href="#biografia" role="menuitem">Biografía</a></li>
+                <li><a href="#educacion" role="menuitem">Educación</a></li>
+                <li><a href="#habilidades" role="menuitem">Habilidades</a></li>
+                <li><a href="#proyectos" role="menuitem">Proyectos</a></li>
+                <li><a href="#contacto" role="menuitem">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Contenido principal -->
-    <main class="container">
-        <!-- Contenedor de dos columnas -->
+    <main id="main-content" role="main" class="container">
         <div class="columnas">
-            <!-- Columna izquierda: Información personal -->
-            <div class="columna-izquierda">
-                <!-- Sección Sobre Mí -->
-                <section id="sobre-mi" class="seccion">
+            <aside class="columna-izquierda" role="complementary">
+                <section id="sobre-mi" class="seccion" aria-labelledby="titulo-sobre-mi">
                     <h2 id="titulo-sobre-mi">Sobre Mí</h2>
-                    <div class="perfil">
-                        <img src="assets/images/Imagen de WhatsApp 2025-04-09 a las 10.02.19_603c2027.jpg" alt="Foto de perfil de Mauricio Mora" class="foto-perfil">
+                    <article class="perfil" role="article">
+                        <img src="assets/images/Imagen de WhatsApp 2025-04-09 a las 10.02.19_603c2027.jpg" 
+                             alt="Foto de perfil de Mauricio Mora" 
+                             class="foto-perfil"
+                             width="200"
+                             height="200">
                         <p>Mauricio Mora García, 35 años, chileno, estudiante de técnico en informática de la Universidad Católica de Temuco.</p>
-                    </div>
+                        <nav class="nav-seccion" aria-label="Navegación a proyectos">
+                            <a href="#proyectos" class="cta-button" role="button">
+                                <span>Más sobre mis proyectos</span>
+                                <i class="fas fa-arrow-down" aria-hidden="true"></i>
+                            </a>
+                        </nav>
+                    </article>
                 </section>
 
-                <!-- Sección Habilidades -->
-                <section id="redes-sociales" class="seccion">
-                    <h2>Redes Sociales</h2>
-                    <div class="habilidades-grid">
-                        <!-- Cada habilidad con su icono -->
-                        <a href="https://www.instagram.com/mauroandres.mg/" target="_blank" rel="noopener noreferrer" class="red-social instagram">
-                            <i class="fab fa-instagram"></i>
+                <section id="redes-sociales" class="seccion" aria-labelledby="titulo-redes">
+                    <h2 id="titulo-redes">Redes Sociales</h2>
+                    <nav class="redes-nav" aria-label="Enlaces a redes sociales">
+                        <a href="https://www.instagram.com/mauroandres.mg/" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="red-social instagram"
+                           aria-label="Instagram"
+                           role="link">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
                             <span>Instagram</span>
                         </a>
-                        <a href="https://api.whatsapp.com/send?phone=56962730137" target="_blank" rel="noopener noreferrer" class="red-social whatsapp">
-                            <i class="fab fa-whatsapp"></i>
+                        <a href="https://api.whatsapp.com/send?phone=56962730137" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="red-social whatsapp"
+                           aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
                             <span>Whatsapp</span>
                         </a>
-                        <a href="https://t.me/mauroandres.mg" target="_blank" rel="noopener noreferrer" class="red-social telegram">
-                            <i class="fab fa-telegram"></i>
+                        <a href="https://t.me/mauroandres.mg" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="red-social telegram"
+                           aria-label="Telegram">
+                            <i class="fab fa-telegram" aria-hidden="true"></i>
                             <span>Telegram</span>
                         </a>
-                        <a href="https://github.com/MauriMora10" target="_blank" rel="noopener noreferrer" class="red-social github">
-                            <i class="fab fa-github"></i>
+                        <a href="https://github.com/MauriMora10" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="red-social github"
+                           aria-label="GitHub">
+                            <i class="fab fa-github" aria-hidden="true"></i>
                             <span>GitHub</span>
                         </a>
-                    </div>
+                    </nav>
                 </section>
 
-                <!-- Sección Contacto -->
-                <section id="contacto" class="seccion">
+                <section id="contacto" class="seccion" aria-labelledby="titulo-contacto">
                     <h2 id="titulo-contacto">Contacto</h2>
-                    <div class="contacto-info">
-                        <div class="contacto-item">
-                            <i class="fas fa-envelope"></i>
-                            <p>mmora2024@alu.uct.cl</p>
-                            <a href="mailto:mmora2024@alu.uct.cl" class="btn-contacto">
-                                <i class="fas fa-paper-plane"></i>
+                    <div class="contacto-info" role="region" aria-label="Información de contacto">
+                        <div class="contacto-item" role="listitem">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <p>maurimora10@gmail.com</p>
+                            <a href="mailto:maurimora10@gmail.com" class="btn-contacto">
+                                <i class="fas fa-paper-plane" aria-hidden="true"></i>
                                 Enviar correo
                             </a>
                         </div>
-                        <div class="contacto-item">
-                            <i class="fas fa-phone"></i>
-                            <a href="tel:+56962730137" class="btn-contacto">
-                                <i class="fas fa-phone-alt"></i>
+                        <div class="contacto-item" role="listitem">
+                            <i class="fas fa-phone" aria-hidden="true"></i>
+                            <p>+56962730137</p>
+                            <a href="tel:+56962730137" class="btn-contacto" role="button">
+                                <i class="fas fa-phone-alt" aria-hidden="true"></i>
                                 Llamar
                             </a>
                         </div>
                     </div>
+                    <form id="formulario-contacto" class="formulario-contacto" action="#" method="POST" role="form" aria-label="Formulario de contacto">
+                        <div class="form-group" role="group" aria-labelledby="nombre-label">
+                            <label id="nombre-label" for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" required aria-required="true">
+                            <span class="error-message" id="nombre-error" role="alert"></span>
+                        </div>
+                        <div class="form-group" role="group" aria-labelledby="email-label">
+                            <label id="email-label" for="email">Email</label>
+                            <input type="email" id="email" name="email" required aria-required="true">
+                            <span class="error-message" id="email-error" role="alert"></span>
+                        </div>
+                        <div class="form-group" role="group" aria-labelledby="mensaje-label">
+                            <label id="mensaje-label" for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="3" required aria-required="true"></textarea>
+                            <span class="error-message" id="mensaje-error" role="alert"></span>
+                        </div>
+                        <button type="submit" class="btn-contacto" role="button">
+                            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                            Enviar Mensaje
+                        </button>
+                    </form>
                 </section>
-            </div>
+            </aside>
 
-            <!-- Columna derecha: Proyectos -->
-            <div class="columna-derecha">
-                <!-- Sección Proyectos -->
-                <section id="biografia" class="seccion">
+            <section class="columna-derecha" role="region">
+                <section id="biografia" class="seccion" aria-labelledby="titulo-biografia">
                     <h2 id="titulo-biografia">Biografía</h2>
-                    <div class="contenido-biografia">
+                    <article class="contenido-biografia" role="article">
                         <p>Soy Mauricio Mora, estudiante de Técnico en Informática en la Universidad Católica de Temuco. Nacido y criado en Temuco, ultimamente he desarrollado un profundo interés por la tecnología y su impacto en la sociedad.</p>
 
                         <p>Mi trayectoria académica me ha permitido adquirir conocimientos sólidos en desarrollo web, programación y sistemas informáticos. Me destaco por mi capacidad de adaptación y mi constante deseo de aprender nuevas tecnologías.</p>
                         
                         <p>Fuera del ámbito académico, disfruto mis tiempos libres practicando ciclismo y tambien dedico tiempo para trabajar y estar con mi familia.</p>
-                    </div>
+                    </article>
                 </section>
 
-                <!-- Sección de Educación -->
                 <section id="educacion" class="seccion">
                     <h2 id="titulo-educacion">Educación</h2>
-                    <div class="educacion-grid">
+                    <article class="educacion-grid">
                         <div class="educacion-item">
                             <i class="fas fa-graduation-cap"></i>
                             <h3>Universidad Católica de Temuco</h3>
@@ -124,12 +177,12 @@
                             <p>Curso de Desarrollo Web Frontend</p>
                             <span class="fecha">2023</span>
                         </div>
-                    </div>
+                    </article>
                 </section>
 
                 <section id="habilidades" class="seccion">
                     <h2 id="titulo-habilidades">Habilidades Técnicas</h2>
-                    <div class="habilidades-tecnicas">
+                    <article class="habilidades-tecnicas">
                         <div class="habilidad-tecnica">
                             <i class="fas fa-code"></i>
                             <h3>Desarrollo Web</h3>
@@ -150,16 +203,45 @@
                             <h3>Soporte Técnico</h3>
                             <p>Capacidad para resolver problemas técnicos y brindar soporte a usuarios.</p>
                         </div>
-                    </div>
+                    </article>
                 </section>
-            </div>
+
+                <section id="proyectos" class="seccion">
+                    <h2 id="titulo-proyectos">Proyectos</h2>
+                    <article class="proyectos-grid">
+                        <div class="proyecto-item">
+                            <i class="fas fa-laptop-code"></i>
+                            <h3>Portafolio Personal</h3>
+                            <p>Desarrollo de este sitio web portafolio utilizando HTML, CSS y JavaScript para mostrar mis habilidades y experiencia.</p>
+                            <a href="https://github.com/MauriMora10/Portafolio" target="_blank" rel="noopener noreferrer" class="btn-proyecto">
+                                <i class="fab fa-github"></i>
+                                Ver en GitHub
+                            </a>
+                        </div>
+                        <div class="proyecto-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h3>Proyecto en Desarrollo</h3>
+                            <p>Próximamente: Aplicación web para gestión de tareas y proyectos personales.</p>
+                        </div>
+                    </article>
+                </section>
+            </section>
         </div>
     </main>
 
-    <!-- Pie de página -->
-    <footer>
+    <footer role="contentinfo">
         <div class="container">
-            <p>&copy; 2024 Mi Portafolio. Todos los derechos reservados.</p>
+            <div class="footer-content">
+                <p>&copy; 2025 Mi Portafolio. Todos los derechos reservados.</p>
+                <div class="logos-container">
+                    <div class="tec-logo">
+                        <img src="assets/images/logo-TEC-UCT.jpg" 
+                             alt="TEC-UCT" 
+                             width="120"
+                             height="40">
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
